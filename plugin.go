@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	version = "0.0.0"
+	version = "0.1.0"
 	pluginTyp = "collector"
 	pluginPkg = "syslog"
 )
@@ -36,7 +36,7 @@ func (p *Plugin) Run() {
 		p.Log("error", "No configuration for port found")
 		return
 	}
-	addr := fmt.Sprintf("0.0.0.0:%s", p.sPort)
+	addr := fmt.Sprintf("0.1.0.0:%s", p.sPort)
 	handler := syslog.NewChannelHandler(p.slogChannel)
 	server := syslog.NewServer()
 	server.SetFormat(syslog.RFC5424)
